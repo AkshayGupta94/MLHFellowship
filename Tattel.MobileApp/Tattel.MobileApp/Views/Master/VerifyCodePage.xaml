@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Tattel.MobileApp.Views.Master.VerifyCodePage"
+    xmlns:ext="clr-namespace:Tattel.MobileApp.Extension"
+    BackgroundColor="White"
+    NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Content>
+
+
+        <ScrollView x:Name="scrMain" VerticalScrollBarVisibility="Never">
+
+            <Grid
+                Margin="0"
+                Padding="40,20,40,20"
+                HorizontalOptions="FillAndExpand"
+                RowSpacing="20"
+                VerticalOptions="FillAndExpand">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label
+                    x:Name="lblHeading"
+                    Grid.Row="0"
+                    FontFamily="truenosbd"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Text="Your Verification Code"
+                    TextColor="#324755"
+                    VerticalOptions="FillAndExpand"
+                    VerticalTextAlignment="Center">
+                    <Label.FontSize>
+                        <OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="18"
+                            iOS="16" />
+                    </Label.FontSize>
+                </Label>
+
+                <BoxView
+                    Grid.Row="1"
+                    Margin="-40,0,-40,0"
+                    BackgroundColor="#e0e1e2"
+                    HeightRequest="1"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="CenterAndExpand" />
+
+                <StackLayout
+                    Grid.Row="2"
+                    Margin="0"
+                    Padding="0"
+                    Spacing="5">
+
+                    <Label
+                        x:Name="lblName"
+                        FontFamily="truenobd"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Start"
+                        Text="Enter your"
+                        TextColor="Black">
+              
+                        <Label.FontSize>
+                            <OnPlatform
+                                x:TypeArguments="x:Double"
+                                Android="30"
+                                iOS="28" />
+                        </Label.FontSize>
+                    </Label>
+
+                    <Label
+                        x:Name="lblName1"
+                        FontFamily="truenobd"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Start"
+                        Text="verification"
+                        TextColor="Black">
+                        
+                        <Label.FontSize>
+                            <OnPlatform
+                                x:TypeArguments="x:Double"
+                                Android="30"
+                                iOS="28" />
+                        </Label.FontSize>
+                    </Label>
+
+                    <Label
+                        x:Name="lblName2"
+                        FontFamily="truenobd"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Start"
+                        Text="code:"
+                        TextColor="Black">
+                        
+                        <Label.FontSize>
+                            <OnPlatform
+                                x:TypeArguments="x:Double"
+                                Android="30"
+                                iOS="28" />
+                        </Label.FontSize>
+                    </Label>
+
+                </StackLayout>
+
+                <Frame
+                    Grid.Row="3"
+                    Margin="0"
+                    Padding="0"
+                    BackgroundColor="#454f63"
+                    CornerRadius="6"
+                    HasShadow="False"
+                    HeightRequest="60"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="CenterAndExpand">
+
+                    <Grid
+                        Margin="0"
+                        Padding="15,10,15,10"
+                        ColumnSpacing="0"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Entry Keyboard="Numeric"
+                            x:Name="txtCode"
+                            Grid.Column="2"
+                            Margin="3,0,0,0"
+                            FontFamily="truenobd"
+                            FontSize="14"
+                            HorizontalOptions="FillAndExpand"
+                            TextColor="White"
+                               BackgroundColor="Transparent"
+                            VerticalOptions="FillAndExpand" />
+
+                    </Grid>
+
+                </Frame>
+
+                <ext:ExtButton
+                    x:Name="btnVerify"
+                    Grid.Row="4"
+                    Padding="0"
+                    BackgroundColor="#ff8c00"
+                    Clicked="BtnVerify_Clicked"
+                    CornerRadius="10"
+                    FontFamily="truenosbd"
+                    HeightRequest="45"
+                    HorizontalOptions="FillAndExpand"
+                    Text="VERIFY"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand" />
+
+            </Grid>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

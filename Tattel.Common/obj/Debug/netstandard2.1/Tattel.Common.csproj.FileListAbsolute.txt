@@ -1,0 +1,9 @@
+G:\Consulting\TattleNew\Tattel.Common\bin\Debug\netstandard2.1\Tattel.Common.deps.json
+G:\Consulting\TattleNew\Tattel.Common\bin\Debug\netstandard2.1\Tattel.Common.dll
+G:\Consulting\TattleNew\Tattel.Common\bin\Debug\netstandard2.1\Tattel.Common.pdb
+G:\Consulting\TattleNew\Tattel.Common\obj\Debug\netstandard2.1\Tattel.Common.AssemblyInfoInputs.cache
+G:\Consulting\TattleNew\Tattel.Common\obj\Debug\netstandard2.1\Tattel.Common.AssemblyInfo.cs
+G:\Consulting\TattleNew\Tattel.Common\obj\Debug\netstandard2.1\Tattel.Common.csproj.CoreCompileInputs.cache
+G:\Consulting\TattleNew\Tattel.Common\obj\Debug\netstandard2.1\Tattel.Common.dll
+G:\Consulting\TattleNew\Tattel.Common\obj\Debug\netstandard2.1\Tattel.Common.pdb
+G:\Consulting\TattleNew\Tattel.Common\obj\Debug\netstandard2.1\Tattel.Common.csproj.AssemblyReference.cache

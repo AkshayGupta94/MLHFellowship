@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Tattel.MobileApp.Views.Chat.ChatPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:control="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:ext="clr-namespace:Tattel.MobileApp.Extension"
+    xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+    BackgroundColor="#E9ECEE"
+    NavigationPage.HasNavigationBar="False"
+    ios:Page.UseSafeArea="true"
+    >
+
+    <ContentPage.Content>
+
+        <Grid
+            Margin="0"
+            Padding="0"
+            HorizontalOptions="FillAndExpand"
+            RowSpacing="0"
+            VerticalOptions="FillAndExpand">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <StackLayout
+                Grid.Row="0"
+                Margin="0"
+                Padding="10"
+                BackgroundColor="White"
+                Orientation="Horizontal">
+
+                <Label
+                    Margin="0"
+                    FontFamily="truenobd"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="{Binding EndUserName}"
+                    TextColor="#454f63">
+                    <Label.FontSize>
+                        <OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="30"
+                            iOS="28" />
+                    </Label.FontSize>
+                </Label>
+
+                <!--<Label
+                    Margin="0"
+                    FontFamily="truenorg"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="End"
+                    Text="{Binding TimeStarted} "
+                    TextColor="#C7CAD0"
+                    VerticalOptions="CenterAndExpand">
+                    <Label.FontSize>
+                        <OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="16"
+                            iOS="14" />
+                    </Label.FontSize>
+                </Label>-->
+
+            </StackLayout>
+
+            <Grid
+                Grid.Row="1"
+                Margin="0"
+                Padding="0"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+
+                <flv:FlowListView
+                    x:Name="flvMain"
+                    Margin="0"
+                    BackgroundColor="#E9ECEE"
+                    FlowColumnCount="1"
+                    HasUnevenRows="True"
+                    FlowItemsSource="{Binding Chats}"
+                    HorizontalOptions="FillAndExpand"
+                    SeparatorVisibility="None"
+                    ItemsSource="{Binding Chats}"
+                    VerticalOptions="FillAndExpand">
+
+                    <flv:FlowListView.FlowColumnTemplate>
+
+                        <DataTemplate>
+
+                            <Grid
+                                Margin="20,0,20,0"
+                                Padding="0"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="StartAndExpand">
+
+                                <Grid RowSpacing="5">
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="35" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        Margin="0"
+                                        Padding="0"
+                                        BackgroundColor="Transparent"
+                                        HeightRequest="35"
+                                        HorizontalOptions="CenterAndExpand"
+                                        VerticalOptions="EndAndExpand"
+                                        WidthRequest="35">
+
+                                        <control:CircleImage Aspect="AspectFill" Source="{Binding UserImageSource}" />
+
+                                    </Grid>
+
+                                    <Grid
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                        Grid.ColumnSpan="2"
+                                        Margin="0,10,15,0"
+                                        Padding="0"
+                                        IsVisible="{Binding DarkBackGround}"
+                                        VerticalOptions="CenterAndExpand">
+
+                                        <Frame
+                                            Padding="22,15,20,15"
+                                            BackgroundColor="#454f63"
+                                            CornerRadius="23"
+                                            HasShadow="False"
+                                            HorizontalOptions="FillAndExpand">
+
+                                            <Label
+                                                Margin="10,0,0,0"
+                                                Text="{Binding txtMessage}"
+                                                TextColor="White"
+                                                VerticalOptions="CenterAndExpand">
+                                                <Label.FontSize>
+                                                    <OnPlatform
+                                                        x:TypeArguments="x:Double"
+                                                        Android="14"
+                                                        iOS="12" />
+                                                </Label.FontSize>
+                                            </Label>
+
+                                        </Frame>
+
+                                        <Frame
+                                            Margin="0.2,0,30,-0.4"
+                                            Padding="0"
+                                            BackgroundColor="#454f63"
+                                            CornerRadius="0"
+                                            HasShadow="False"
+                                            HeightRequest="25"
+                                            HorizontalOptions="StartAndExpand"
+                                            VerticalOptions="EndAndExpand"
+                                            WidthRequest="32" />
+
+                                    </Grid>
+
+                                    <Label
+                                        Grid.Row="1"
+                                        Grid.Column="1"
+                                        Margin="0"
+                                        FontFamily="truenorg"
+                                        HorizontalOptions="FillAndExpand"
+                                        HorizontalTextAlignment="End"
+                                        Text="{Binding Time}"
+                                        TextColor="#ABABAC">
+                                        <Label.FontSize>
+                                            <OnPlatform
+                                                x:TypeArguments="x:Double"
+                                                Android="10"
+                                                iOS="8" />
+                                        </Label.FontSize>
+                                    </Label>
+
+                                    <Grid
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                        Margin="0,10,0,0"
+                                        Padding="0"
+                                        IsVisible="{Binding OrangeBackGround}"
+                                        VerticalOptions="CenterAndExpand">
+
+                                        <Frame
+                                            Padding="20,15,22,15"
+                                            BackgroundColor="#ff8c00"
+                                            CornerRadius="25"
+                                            HasShadow="False"
+                                            HorizontalOptions="FillAndExpand">
+
+                                            <Label
+                                                Margin="10,0,10,0"
+                                                Text="{Binding txtMessage}"
+                                                TextColor="White"
+                                                VerticalOptions="CenterAndExpand" />
+
+                                        </Frame>
+
+                                        <Frame
+                                            Margin="30,0,0,-0.3"
+                                            Padding="0"
+                                            BackgroundColor="#ff8c00"
+                                            CornerRadius="0"
+                                            HasShadow="False"
+                                            HeightRequest="25"
+                                            HorizontalOptions="EndAndExpand"
+                                            VerticalOptions="EndAndExpand"
+                                            WidthRequest="32" />
+
+                                    </Grid>
+
+                                    <Grid
+                                        Grid.Row="0"
+                                        Grid.Column="2"
+                                        Margin="0"
+                                        Padding="0"
+                                        BackgroundColor="Transparent"
+                                        HeightRequest="35"
+                                        HorizontalOptions="CenterAndExpand"
+                                        VerticalOptions="EndAndExpand"
+                                        WidthRequest="35">
+
+                                        <control:CircleImage Aspect="AspectFill" Source="{Binding EndUserImage}" />
+
+                                    </Grid>
+
+                                </Grid>
+
+                            </Grid>
+
+                        </DataTemplate>
+                    </flv:FlowListView.FlowColumnTemplate>
+
+                    <flv:FlowListView.Footer>
+                        <StackLayout Padding="0,0,0,80" />
+                    </flv:FlowListView.Footer>
+
+                    <flv:FlowListView.Header>
+                        <StackLayout Padding="0,20,0,0" />
+                    </flv:FlowListView.Header>
+
+                </flv:FlowListView>
+
+                <Image
+                    x:Name="imgChatNotification"
+                    Margin="0,0,20,20"
+                    Aspect="AspectFit"
+                    HeightRequest="50"
+                    HorizontalOptions="EndAndExpand"
+                    Source="iconLift.png"
+                    VerticalOptions="EndAndExpand"
+                    WidthRequest="50">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ImgChatNotification_Tapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+            </Grid>
+
+            <Grid
+                x:Name="grdText"
+                Grid.Row="2"
+                Margin="0,0,0,0"
+                Padding="10,0,10,0"
+                BackgroundColor="White"
+                ColumnSpacing="20"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="EndAndExpand">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!--<Image
+                    Grid.Column="0"
+                    HeightRequest="20"
+                    HorizontalOptions="CenterAndExpand"
+                    Source="iconOrangeVoice"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="20" />
+
+                <Image
+                    Grid.Column="1"
+                    HeightRequest="20"
+                    HorizontalOptions="CenterAndExpand"
+                    Source="iconOrageCamera"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="20" />-->
+
+                <Frame
+                    Grid.Column="2"
+                    Margin="0,0,0,0"
+                    Padding="5"
+                    BackgroundColor="White"
+                    BorderColor="#C8D1D3"
+                    CornerRadius="25"
+                    HasShadow="False"
+                    HeightRequest="40"
+                    HorizontalOptions="FillAndExpand">
+
+                    <Grid
+                        Margin="0"
+                        Padding="10,0,0,0"
+                        ColumnSpacing="5"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <ext:ExtEntry
+                            Grid.Column="0"
+                            x:Name="ChatMessage"
+                            Margin="0"
+                            BackgroundColor="White"
+                            Focused="ExtEntry_Focused"
+                            FontFamily="truenorg"
+                            HorizontalOptions="FillAndExpand"
+                            Keyboard="Chat"
+                            Placeholder="Say something ..."
+                            PlaceholderColor="#caccd2"
+                            Unfocused="ExtEntry_Unfocused"
+                            VerticalOptions="CenterAndExpand">
+                            <ext:ExtEntry.FontSize>
+                                <OnPlatform
+                                    x:TypeArguments="x:Double"
+                                    Android="12"
+                                    iOS="10" />
+                            </ext:ExtEntry.FontSize>
+                        </ext:ExtEntry>
+
+                        <Image
+                            Grid.Column="1"
+                            Margin="0"
+                            HeightRequest="40"
+                            HorizontalOptions="EndAndExpand"
+                            Source="iconOrangeSend.png"
+                            VerticalOptions="CenterAndExpand"
+                            x:Name="SendChat"
+                            WidthRequest="40" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="SendMessage_Tapped" />
+                            </Image.GestureRecognizers>
+                        </Image>
+
+                    </Grid>
+
+                </Frame>
+
+            </Grid>
+
+        </Grid>
+
+    </ContentPage.Content>
+
+</ContentPage>

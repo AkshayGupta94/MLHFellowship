@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Tattel.MobileApp.Views.Profile.ProfilePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:control="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    xmlns:ext="clr-namespace:Tattel.MobileApp.Extension"
+    Title="Profile"
+    >
+
+    <!--<NavigationPage.TitleView>
+
+       
+
+            <Label
+                x:Name="lblTitle"
+              
+                FontFamily="truenosbd"
+                FontSize="18"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="Profile"
+                TextColor="White"
+                VerticalOptions="Center"
+                VerticalTextAlignment="Center" />
+
+        
+
+    </NavigationPage.TitleView>-->
+
+    <ContentPage.Content>
+
+        <ScrollView VerticalScrollBarVisibility="Never">
+
+            <Grid
+                Margin="0"
+                Padding="15"
+                HorizontalOptions="FillAndExpand"
+                RowSpacing="0"
+                VerticalOptions="FillAndExpand">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="45" />
+                    <RowDefinition Height="45" />
+                </Grid.RowDefinitions>
+
+                <Grid
+                    Grid.Row="0"
+                    Margin="0,60,0,0"
+                    Padding="0">
+
+                    <Grid Margin="0" Padding="0">
+
+                        <Frame
+                            Margin="0"
+                            Padding="20"
+                            BackgroundColor="#454f63"
+                            CornerRadius="10"
+                            HasShadow="False"
+                            HeightRequest="80"
+                            VerticalOptions="CenterAndExpand">
+
+                            <Grid>
+
+                                <StackLayout
+                                    Margin="0"
+                                    Padding="0"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Spacing="4"
+                                    VerticalOptions="EndAndExpand">
+
+                                    <Label
+                                        x:Name="lblUserName"
+                                        FontFamily="truenobd"
+                                        HorizontalOptions="FillAndExpand"
+                                        HorizontalTextAlignment="Center"
+                                        Text="{Binding Name}"
+                                        TextColor="White">
+                                        <Label.FontSize>
+                                            <OnPlatform
+                                                x:TypeArguments="x:Double"
+                                                Android="18"
+                                                iOS="16" />
+                                        </Label.FontSize>
+                                    </Label>
+
+                                    <StackLayout
+                                        Margin="0"
+                                        Padding="0"
+                                        HorizontalOptions="CenterAndExpand"
+                                        Orientation="Horizontal"
+                                        Spacing="3">
+
+                                        <Frame
+                                            Margin="0,2,0,0"
+                                            Padding="0"
+                                            BackgroundColor="#63d626"
+                                            CornerRadius="10"
+                                            HasShadow="False"
+                                            HeightRequest="7"
+                                            VerticalOptions="CenterAndExpand"
+                                            WidthRequest="7" />
+
+                                        <Label
+                                            x:Name="lblLocation"
+                                            FontFamily="truenorg"
+                                            Text="{Binding Sector}"
+                                            TextColor="White">
+                                            <Label.FontSize>
+                                                <OnPlatform
+                                                    x:TypeArguments="x:Double"
+                                                    Android="12"
+                                                    iOS="10" />
+                                            </Label.FontSize>
+                                        </Label>
+
+                                    </StackLayout>
+
+                                </StackLayout>
+
+                            </Grid>
+
+                        </Frame>
+
+                    </Grid>
+
+                    <Grid
+                        Margin="0,-60,0,0"
+                        Padding="0"
+                        HeightRequest="100"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="StartAndExpand"
+                        WidthRequest="100">
+
+                        <control:CircleImage x:Name="ProfileImg" Aspect="AspectFill"  />
+
+                    </Grid>
+
+                </Grid>
+
+                <Label
+                    x:Name="lblName"
+                    Grid.Row="1"
+                    Margin="10,15,0,10"
+                    FontFamily="truenosbd"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="Designation :"
+                    TextColor="#6e8ca0">
+                    <Label.FontSize>
+                        <OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="18"
+                            iOS="16" />
+                    </Label.FontSize>
+                </Label>
+
+                <Frame
+                    Grid.Row="2"
+                    Margin="0"
+                    Padding="20"
+                    BackgroundColor="#454f63"
+                    CornerRadius="10"
+                    HasShadow="False"
+                    VerticalOptions="CenterAndExpand">
+
+                    <Grid Margin="0" Padding="0">
+
+                        <Label
+                            x:Name="lblAbc"
+                            FontFamily="truenorg"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            LineBreakMode="CharacterWrap"
+                            Text="{Binding Designation}"
+                            
+                            TextColor="White"
+                            VerticalOptions="FillAndExpand"
+                            VerticalTextAlignment="Center">
+                            <Label.FontSize>
+                                <OnPlatform
+                                    x:TypeArguments="x:Double"
+                                    Android="14"
+                                    iOS="12" />
+                            </Label.FontSize>
+                        </Label>
+
+                    </Grid>
+
+                </Frame>
+
+                <Label
+                    x:Name="lblName1"
+                    Grid.Row="3"
+                    Margin="10,15,0,10"
+                    FontFamily="truenosbd"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="Organisation :"
+                    TextColor="#6e8ca0">
+                    <Label.FontSize>
+                        <OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="18"
+                            iOS="16" />
+                    </Label.FontSize>
+                </Label>
+
+                <Frame
+                    Grid.Row="4"
+                    Margin="0"
+                    Padding="20"
+                    BackgroundColor="#454f63"
+                    CornerRadius="10"
+                    HasShadow="False"
+                    VerticalOptions="CenterAndExpand">
+
+                    <Grid Margin="0" Padding="0">
+
+                        <Label
+                            x:Name="lblAbc1"
+                            FontFamily="truenorg"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            LineBreakMode="CharacterWrap"
+                            Text="{Binding Organisation}"
+                            TextColor="White"
+                            VerticalOptions="FillAndExpand"
+                            VerticalTextAlignment="Center">
+                            <Label.FontSize>
+                                <OnPlatform
+                                    x:TypeArguments="x:Double"
+                                    Android="14"
+                                    iOS="12" />
+                            </Label.FontSize>
+                        </Label>
+
+                    </Grid>
+
+                </Frame>
+
+
+                <Label
+                    x:Name="lblAge1"
+                    Grid.Row="5"
+                    Margin="10,15,0,10"
+                    FontFamily="truenosbd"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="EmailAddress : "
+                    TextColor="#6e8ca0">
+                    <Label.FontSize>
+                        <OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="18"
+                            iOS="16" />
+                    </Label.FontSize>
+                </Label>
+
+                <Frame
+                    Grid.Row="6"
+                    Margin="0"
+                    Padding="20"
+                    BackgroundColor="#454f63"
+                    CornerRadius="10"
+                    HasShadow="False"
+                    VerticalOptions="CenterAndExpand">
+
+                    <Grid Margin="0" Padding="0">
+
+                        <Label
+                            x:Name="lblAge2"
+                            FontFamily="truenorg"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            LineBreakMode="CharacterWrap"
+                            Text="{Binding EmailAddress}"
+                            TextColor="White"
+                            VerticalOptions="FillAndExpand"
+                            VerticalTextAlignment="Center">
+                            <Label.FontSize>
+                                <OnPlatform
+                                    x:TypeArguments="x:Double"
+                                    Android="14"
+                                    iOS="12" />
+                            </Label.FontSize>
+                        </Label>
+
+                    </Grid>
+
+                </Frame>
+                <Label
+                   
+                    Grid.Row="7"
+                    Margin="10,15,0,10"
+                    FontFamily="truenosbd"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="Date of Birth : "
+                    TextColor="#6e8ca0">
+                    <Label.FontSize>
+                        <OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="18"
+                            iOS="16" />
+                    </Label.FontSize>
+                </Label>
+
+                <Frame
+                    Grid.Row="8"
+                    Margin="0"
+                    Padding="20"
+                    BackgroundColor="#454f63"
+                    CornerRadius="10"
+                    HasShadow="False"
+                    VerticalOptions="CenterAndExpand">
+
+                    <Grid Margin="0" Padding="0">
+
+                        <Label
+                            
+                            FontFamily="truenorg"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            LineBreakMode="CharacterWrap"
+                            Text="{Binding DateOfBirth, StringFormat='{0:dd/MM/yyyy}'}"
+                            TextColor="White"
+                            VerticalOptions="FillAndExpand"
+                            VerticalTextAlignment="Center">
+                            <Label.FontSize>
+                                <OnPlatform
+                                    x:TypeArguments="x:Double"
+                                    Android="14"
+                                    iOS="12" />
+                            </Label.FontSize>
+                        </Label>
+
+                    </Grid>
+
+                </Frame>
+                <Label
+                   
+                    Grid.Row="9"
+                    Margin="10,15,0,10"
+                    FontFamily="truenosbd"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="Gender : "
+                    TextColor="#6e8ca0">
+                    <Label.FontSize>
+                        <OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="18"
+                            iOS="16" />
+                    </Label.FontSize>
+                </Label>
+
+                <Frame
+                    Grid.Row="10"
+                    Margin="0"
+                    Padding="20"
+                    BackgroundColor="#454f63"
+                    CornerRadius="10"
+                    HasShadow="False"
+                    VerticalOptions="CenterAndExpand">
+
+                    <Grid Margin="0" Padding="0">
+
+                        <Label
+                            
+                            FontFamily="truenorg"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            LineBreakMode="CharacterWrap"
+                            Text="{Binding Bio}"
+                            TextColor="White"
+                            VerticalOptions="FillAndExpand"
+                            VerticalTextAlignment="Center">
+                            <Label.FontSize>
+                                <OnPlatform
+                                    x:TypeArguments="x:Double"
+                                    Android="14"
+                                    iOS="12" />
+                            </Label.FontSize>
+                        </Label>
+
+                    </Grid>
+
+                </Frame>
+
+                <ext:ExtButton
+                    x:Name="btnMain"
+                    Grid.Row="12"
+                    Margin="0,0,0,0"
+                    Padding="0"
+                    BackgroundColor="#ff8c00"
+                   Clicked="btnMain_Clicked"
+                    CornerRadius="10"
+                    FontFamily="truenosbd"
+                    HeightRequest="45"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="MAIN PAGE"
+                    TextColor="White"
+                    VerticalOptions="EndAndExpand"
+                    WidthRequest="200" />
+                <ext:ExtButton
+                    x:Name="btnWERT"
+                    Grid.Row="13"
+                    Margin="0,10,0,0"
+                    Padding="0"
+                    BackgroundColor="#ff8c00"
+                    Clicked="BtnWERT_Clicked"
+                    CornerRadius="10"
+                    FontFamily="truenosbd"
+                    HeightRequest="45"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="EDIT PROFILE"
+                    TextColor="White"
+                    VerticalOptions="EndAndExpand"
+                    WidthRequest="200" />
+
+            </Grid>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+
+</ContentPage>

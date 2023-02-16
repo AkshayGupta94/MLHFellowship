@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tattel.MobileApp.Views.FirstTimeScreen.ProfessionalSignUp"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Content>
+        <ScrollView x:Name="scrMain" VerticalScrollBarVisibility="Never">
+
+            <Grid
+                Margin="0"
+                Padding="40,20,40,20"
+                HorizontalOptions="FillAndExpand"
+                RowSpacing="20"
+                VerticalOptions="FillAndExpand">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+
+                </Grid.RowDefinitions>
+
+                <Label
+                    x:Name="lblHeading"
+                    Grid.Row="0"
+                    FontFamily="truenosbd"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Text="Professional Registeration"
+                    TextColor="#324755"
+                    VerticalOptions="FillAndExpand"
+                    VerticalTextAlignment="Center">
+                    <Label.FontSize>
+                        <OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="18"
+                            iOS="16" />
+                    </Label.FontSize>
+                </Label>
+
+                <BoxView
+                    Grid.Row="1"
+                    Margin="-40,0,-40,0"
+                    BackgroundColor="#e0e1e2"
+                    HeightRequest="1"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="CenterAndExpand" />
+
+                <StackLayout
+                    Grid.Row="3"
+                    Margin="0"
+                    Padding="0"
+                    Spacing="5">
+
+                    <Label
+                        x:Name="lblName"
+                        FontFamily="truenobd"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Start"
+                        Text="Please Log in:"
+                        TextColor="Black">
+
+                        <Label.FontSize>
+                            <OnPlatform
+                                x:TypeArguments="x:Double"
+                                Android="30"
+                                iOS="28" />
+                        </Label.FontSize>
+                    </Label>
+
+
+
+                </StackLayout>
+               
+
+
+
+
+                <StackLayout
+                    Grid.Row="5"
+                    Margin="0"
+                    Padding="0"
+                    HorizontalOptions="CenterAndExpand"
+                    Orientation="Horizontal"
+                    Spacing="0"
+                    VerticalOptions="CenterAndExpand">
+
+                    
+                        <ImageButton Source="LinkedIn.png" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="250"
+                                     Clicked="ImageButton_Clicked" 
+                                      ></ImageButton>
+                 
+
+
+
+
+
+
+                </StackLayout>
+              
+            </Grid>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

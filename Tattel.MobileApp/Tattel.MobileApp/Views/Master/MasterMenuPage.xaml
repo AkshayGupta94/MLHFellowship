@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Tattel.MobileApp.Views.Master.MasterMenuPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Menu"
+    xmlns:control="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    BackgroundColor="White"
+   
+    NavigationPage.HasNavigationBar="True">
+
+    <ContentPage.Content>
+
+        <ScrollView VerticalScrollBarVisibility="Never">
+
+            <Grid
+                Margin="0"
+                Padding="0"
+                HorizontalOptions="FillAndExpand"
+                RowSpacing="0"
+                VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <!--  MenuHeader  -->
+                <Grid
+                    Grid.Row="0"
+                    Margin="0"
+                    Padding="0"
+                    HorizontalOptions="FillAndExpand">
+
+                    <Image Aspect="Fill"  Source="iconMenuBackground.png" />
+
+                    <Grid
+                        Margin="0"
+                        Padding="40,20,20,20"
+                        HorizontalOptions="FillAndExpand"
+                        RowSpacing="5"
+                        VerticalOptions="CenterAndExpand">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Frame
+                            Grid.Row="0"
+                            Margin="0,0,0,5"
+                            Padding="0"
+                            CornerRadius="45"
+                            HasShadow="False"
+                            HeightRequest="80"
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="80">
+
+                            <control:CircleImage x:Name="ProfilePic" Aspect="AspectFill"  />
+                            <!--<Image x:Name="ProfilePic" Aspect="AspectFill" />-->
+
+                        </Frame>
+
+                        <Label
+                            x:Name="lblUserName"
+                            Grid.Row="1"
+                            FontFamily="truenobd"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            Text=""
+                            TextColor="White">
+                            <Label.FontSize>
+                                <OnPlatform
+                                    x:TypeArguments="x:Double"
+                                    Android="20"
+                                    iOS="18" />
+                            </Label.FontSize>
+                        </Label>
+
+                        <Label
+                            x:Name="lblEmail"
+                            Grid.Row="2"
+                            FontFamily="truenorg"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            Text=""
+                            TextColor="White">
+                            <Label.FontSize>
+                                <OnPlatform
+                                    x:TypeArguments="x:Double"
+                                    Android="14"
+                                    iOS="12" />
+                            </Label.FontSize>
+                        </Label>
+
+                    </Grid>
+
+                </Grid>
+
+                <!--  BoxView  -->
+                <Grid Grid.Row="1" ColumnSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <BoxView
+                        Grid.Column="0"
+                        BackgroundColor="#ff8c00"
+                        HeightRequest="7"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand" />
+
+                    <BoxView
+                        Grid.Column="1"
+                        BackgroundColor="White"
+                        HeightRequest="7"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand" />
+
+                    <BoxView
+                        Grid.Column="2"
+                        BackgroundColor="#ff8c00"
+                        HeightRequest="7"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand" />
+
+                    <BoxView
+                        Grid.Column="3"
+                        BackgroundColor="White"
+                        HeightRequest="5"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand" />
+
+                </Grid>
+
+                <!--  MenuList  -->
+                <Grid
+                    Grid.Row="2"
+                    Margin="0"
+                    Padding="25"
+                    RowSpacing="25">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <!--  Home  -->
+                    <Grid
+                        x:Name="grdHome"
+                        Grid.Row="0"
+                        Margin="0"
+                        Padding="0"
+                        ColumnSpacing="20"
+                        HorizontalOptions="FillAndExpand">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="25" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image
+                            Grid.Column="0"
+                            HorizontalOptions="CenterAndExpand"
+                            Source="iconHome.png"
+                            VerticalOptions="CenterAndExpand" />
+
+                        <Label
+                            x:Name="lblHome"
+                            Grid.Column="1"
+                            FontFamily="truenorg"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            Text="Tattel"
+                            TextColor="#454f63"
+                            VerticalOptions="CenterAndExpand"
+                            VerticalTextAlignment="Center">
+                            <Label.FontSize>
+                                <OnPlatform
+                                    x:TypeArguments="x:Double"
+                                    Android="18"
+                                    iOS="16" />
+                            </Label.FontSize>
+                        </Label>
+
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GrdHome_Tapped" />
+                        </Grid.GestureRecognizers>
+
+                    </Grid>
+
+                    <!--  Proposals  -->
+                    <Grid
+                        x:Name="grdNotice"
+                        Grid.Row="1"
+                        Margin="0"
+                        Padding="0"
+                        ColumnSpacing="20"
+                        HorizontalOptions="FillAndExpand">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="25" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image
+                            Grid.Column="0"
+                            HorizontalOptions="CenterAndExpand"
+                            Source="iconNotification.png"
+                            VerticalOptions="CenterAndExpand" />
+
+                        <Label
+                            x:Name="lblNotice"
+                            Grid.Column="1"
+                            FontFamily="truenorg"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            Text="Tattelers"
+                            TextColor="#454f63"
+                            VerticalOptions="CenterAndExpand"
+                            VerticalTextAlignment="Center">
+                            <Label.FontSize>
+                                <OnPlatform
+                                    x:TypeArguments="x:Double"
+                                    Android="18"
+                                    iOS="16" />
+                            </Label.FontSize>
+                        </Label>
+
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GrdNotice_Tapped" />
+                        </Grid.GestureRecognizers>
+
+                    </Grid>
+
+                    <!--  Chat  -->
+                    <Grid
+                        x:Name="grdChat"
+                        Grid.Row="2"
+                        Margin="0"
+                        Padding="0"
+                        ColumnSpacing="20"
+                        HorizontalOptions="FillAndExpand">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="25" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image
+                            Grid.Column="0"
+                            HorizontalOptions="CenterAndExpand"
+                            Source="iconChat.png"
+                            VerticalOptions="CenterAndExpand" />
+
+                        <Label
+                            x:Name="lblChat"
+                            Grid.Column="1"
+                            FontFamily="truenorg"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            Text="Chats"
+                            TextColor="#454f63"
+                            VerticalOptions="CenterAndExpand"
+                            VerticalTextAlignment="Center">
+                            <Label.FontSize>
+                                <OnPlatform
+                                    x:DataType="x:Double"
+                                    Android="18"
+                                    iOS="16" />
+                            </Label.FontSize>
+                        </Label>
+
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GrdChat_Tapped" />
+                        </Grid.GestureRecognizers>
+
+                    </Grid>
+
+                    <!--  User  -->
+                    <Grid
+                        x:Name="grdUser"
+                        Grid.Row="3"
+                        Margin="0"
+                        Padding="0"
+                        ColumnSpacing="20"
+                        HorizontalOptions="FillAndExpand">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="25" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image
+                            Grid.Column="0"
+                            HorizontalOptions="CenterAndExpand"
+                            Source="iconUser.png"
+                            VerticalOptions="CenterAndExpand" />
+
+                        <Label
+                            x:Name="lblUser"
+                            Grid.Column="1"
+                            FontFamily="truenorg"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            Text="My Profile"
+                            TextColor="#454f63"
+                            VerticalOptions="CenterAndExpand"
+                            VerticalTextAlignment="Center">
+                            <Label.FontSize>
+                                <OnPlatform
+                                    x:DataType="x:Double"
+                                    Android="18"
+                                    iOS="16" />
+                            </Label.FontSize>
+                        </Label>
+
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GrdUser_Tapped" />
+                        </Grid.GestureRecognizers>
+
+                    </Grid>
+
+                    <!--  Information  -->
+                    <Grid
+                        x:Name="grdInfo"
+                        Grid.Row="4"
+                        Margin="0"
+                        Padding="0"
+                        ColumnSpacing="20"
+                        HorizontalOptions="FillAndExpand">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="25" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image
+                            Grid.Column="0"
+                            HorizontalOptions="CenterAndExpand"
+                            Source="iconInfo.png"
+                            VerticalOptions="CenterAndExpand" />
+
+                        <Label
+                            x:Name="lblInfo"
+                            Grid.Column="1"
+                            FontFamily="truenorg"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            Text="About Us"
+                            TextColor="#454f63"
+                            VerticalOptions="CenterAndExpand"
+                            VerticalTextAlignment="Center">
+                            <Label.FontSize>
+                                <OnPlatform
+                                    x:DataType="x:Double"
+                                    Android="18"
+                                    iOS="16" />
+                            </Label.FontSize>
+                        </Label>
+
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GrdInfo_Tapped" />
+                        </Grid.GestureRecognizers>
+
+                    </Grid>
+
+                    <!--  Success  -->
+                    <Grid
+                        x:Name="grdSuccess"
+                        Grid.Row="5"
+                        Margin="0"
+                        Padding="0"
+                        ColumnSpacing="20"
+                        HorizontalOptions="FillAndExpand">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="25" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image
+                            Grid.Column="0"
+                            HorizontalOptions="CenterAndExpand"
+                            Source="iconSuccess.png"
+                            VerticalOptions="CenterAndExpand" />
+
+                        <Label
+                            x:Name="lblSuccess"
+                            Grid.Column="1"
+                            FontFamily="truenorg"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            Text="Privacy Policy"
+                            TextColor="#454f63"
+                            VerticalOptions="CenterAndExpand"
+                            VerticalTextAlignment="Center">
+                            <Label.FontSize>
+                                <OnPlatform
+                                    x:DataType="x:Double"
+                                    Android="18"
+                                    iOS="16" />
+                            </Label.FontSize>
+                        </Label>
+
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GrdSuccess_Tapped" />
+                        </Grid.GestureRecognizers>
+
+                    </Grid>
+
+                    <!--  Logout  -->
+                    <Grid
+                        x:Name="grdLogout"
+                        Grid.Row="6"
+                        Margin="3,300,0,0"
+                        Padding="0"
+                        ColumnSpacing="20"
+                        HorizontalOptions="FillAndExpand">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="25" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image
+                            Grid.Column="0"
+                            HorizontalOptions="CenterAndExpand"
+                            Source="iconLogout.png"
+                            VerticalOptions="CenterAndExpand" />
+
+                        <Label
+                            x:Name="lblLogout"
+                            Grid.Column="1"
+                            FontFamily="truenorg"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            Text="Logout"
+                            TextColor="#454f63"
+                            VerticalOptions="CenterAndExpand"
+                            VerticalTextAlignment="Center">
+                            <Label.FontSize>
+                                <OnPlatform
+                                    x:DataType="x:Double"
+                                    Android="18"
+                                    iOS="16" />
+                            </Label.FontSize>
+                        </Label>
+
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="GrdLogout_Tapped" />
+                        </Grid.GestureRecognizers>
+
+                    </Grid>
+
+                </Grid>
+
+            </Grid>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+
+</ContentPage>

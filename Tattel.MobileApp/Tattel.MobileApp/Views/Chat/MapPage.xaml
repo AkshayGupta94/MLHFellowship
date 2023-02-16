@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Tattel.MobileApp.Views.Chat.MapPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+    NavigationPage.HasNavigationBar="True"
+    Title="Tattel"
+    
+    >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+                 Text="Filter"
+                 Order="Primary"
+                 Priority="0"  Clicked="ToolbarItem_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+
+        <Grid
+            Margin="0"
+            Padding="0"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <ActivityIndicator VerticalOptions="Center" HorizontalOptions="Center" IsRunning="{Binding IsBusy}"/>
+            <Label VerticalOptions="Center" HorizontalOptions="Center" IsVisible="{Binding IsBusy}" Text="{Binding LoadingStatus}" Margin="0,80,0,0"/>
+            <ContentView Content="{Binding Map}"/>
+            <!--<Image Aspect="AspectFill" Source="Map.png" />-->
+
+            <!-- <Picker x:Name="picker" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"
+        Title="Select an age group" BackgroundColor="White" Opacity="90"
+                     WidthRequest="350"
+                    
+                    SelectedIndexChanged="picker_SelectedIndexChanged"
+        >
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>18-25</x:String>
+                        <x:String>26-35</x:String>
+                        <x:String>36-50</x:String>
+                        <x:String>50-65</x:String>
+                        <x:String>65+</x:String>
+                       
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>-->
+
+            <Image
+                x:Name="imgLacation"
+                Margin="0,0,20,20"
+                Aspect="AspectFit"
+                HeightRequest="50"
+                HorizontalOptions="EndAndExpand"
+                Source="iconLocation.png"
+                VerticalOptions="EndAndExpand"
+                WidthRequest="50">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ImgLacation_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+
+        </Grid>
+
+    </ContentPage.Content>
+
+</ContentPage>

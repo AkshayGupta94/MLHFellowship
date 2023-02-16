@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1082811113281",
+    "firebase_url": "https://tattel-5cb3f.firebaseio.com",
+    "project_id": "tattel-5cb3f",
+    "storage_bucket": "tattel-5cb3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082811113281:android:ec668944dd5c0d1312cbc0",
+        "android_client_info": {
+          "package_name": "com.globle.tattel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1082811113281-qggn8628cjd0gdu9ljdh1ov74e91s35r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCEduSyeVgO0KJG32o2PMt44WCmqnYcKU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1082811113281-qggn8628cjd0gdu9ljdh1ov74e91s35r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1082811113281-3j1hu4ccoplh5uuuc4oaognsvjns1k7s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.test.tattel"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

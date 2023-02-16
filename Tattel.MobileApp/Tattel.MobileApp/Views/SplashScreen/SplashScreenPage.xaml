@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Tattel.MobileApp.Views.SpalshScreen.SplashScreenPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False"
+    xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms">
+    <ContentPage.Content>
+        <Grid BackgroundColor="#f28916">
+            <lottie:AnimationView 
+                x:Name="animationView" 
+                Animation="tatel.json" 
+                AutoPlay="True" Loop="true" Margin="0" WidthRequest="10000" HeightRequest="10000" 
+                VerticalOptions="FillAndExpand" 
+                HorizontalOptions="FillAndExpand" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tattel.MobileApp.Views.FirstTimeScreen.OnBoarding"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Content>
+        <Grid Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <CarouselView CurrentItemChanged="CarouselView_CurrentItemChanged" Grid.RowSpan="11">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            
+                                
+                                    <Image Source="{Binding }"
+                                           BackgroundColor="Red"
+                               Aspect="AspectFill"
+                              
+                             
+                               HorizontalOptions="FillAndExpand" />
+                                   
+                             
+                        </Grid>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+                <CarouselView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>pic1.png</x:String>
+                        <x:String>pic2.png</x:String>
+                        <x:String>pic3.png</x:String>
+                        
+                    </x:Array>
+                </CarouselView.ItemsSource>
+            </CarouselView>
+            <Button
+                x:Name="lblName2"
+                Grid.Row="10"
+                Margin="0"
+                FontFamily="truenorg"
+                HorizontalOptions="Fill"
+                Text="GET STARTED"
+                IsEnabled="True"
+                BackgroundColor="Orange"
+                TextColor="White"
+                Clicked="Started_Clicked">
+                <Button.FontSize>
+                    <OnPlatform
+                        x:TypeArguments="x:Double"
+                        Android="20"
+                        iOS="18" />
+                </Button.FontSize>
+            </Button>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

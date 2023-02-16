@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "RS5NkSTkrvpXUgjOA4mBfHHL7m4S1mbhX2pascp7DL/RUJFadH76U9O35+ZbglnAkwnwUX2C4bmJtF1URGbYVA==",
+  "success": true,
+  "projectFilePath": "G:\\Consulting\\TattleNew\\Tattel.Common\\Tattel.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aksha\\.nuget\\packages\\identitymodel\\4.3.0\\identitymodel.4.3.0.nupkg.sha512",
+    "C:\\Users\\aksha\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\aksha\\.nuget\\packages\\system.text.encodings.web\\4.7.0\\system.text.encodings.web.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

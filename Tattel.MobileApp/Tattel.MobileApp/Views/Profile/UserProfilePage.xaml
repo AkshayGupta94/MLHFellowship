@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Tattel.MobileApp.Views.Profile.UserProfilePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:control="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    xmlns:ext="clr-namespace:Tattel.MobileApp.Extension"
+    BackgroundColor="White"
+    NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Content>
+
+        <ScrollView VerticalScrollBarVisibility="Never">
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid
+                    Grid.Row="0"
+                    Margin="0"
+                    Padding="0"
+                    HorizontalOptions="FillAndExpand">
+
+                    <Image Aspect="Fill" Source="iconUserBlueImage.png" />
+
+                    <Grid
+                        Margin="0"
+                        Padding="40,20,20,20"
+                        HorizontalOptions="FillAndExpand"
+                        RowSpacing="5"
+                        VerticalOptions="CenterAndExpand">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid
+                            Grid.Row="0"
+                            Margin="0,0,0,5"
+                            Padding="0"
+                            HeightRequest="80"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="80">
+
+                            <control:CircleImage Aspect="AspectFill" Source="iconUserImage" />
+
+                        </Grid>
+
+                        <Label
+                            x:Name="lblUserName"
+                            Grid.Row="1"
+                            FontFamily="truenobd"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Center"
+                            Text="Cody Brown"
+                            TextColor="White">
+                            <Label.FontSize>
+                                <OnPlatform
+                                    x:TypeArguments="x:Double"
+                                    Android="12"
+                                    iOS="10" />
+                            </Label.FontSize>
+                        </Label>
+
+                        <StackLayout
+                            Grid.Row="2"
+                            Margin="0"
+                            Padding="0"
+                            HorizontalOptions="CenterAndExpand"
+                            Orientation="Horizontal"
+                            Spacing="3">
+
+                            <Frame
+                                Margin="0,1,0,0"
+                                Padding="0"
+                                BackgroundColor="#63d626"
+                                CornerRadius="10"
+                                HasShadow="False"
+                                HeightRequest="7"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="7" />
+
+                            <Label
+                                x:Name="lblLocation"
+                                FontFamily="truenorg"
+                                Text="London,UK"
+                                TextColor="White">
+                                <Label.FontSize>
+                                    <OnPlatform
+                                        x:TypeArguments="x:Double"
+                                        Android="10"
+                                        iOS="8" />
+                                </Label.FontSize>
+                            </Label>
+
+                        </StackLayout>
+
+                    </Grid>
+
+                </Grid>
+
+                <Frame
+                    Grid.Row="1"
+                    Margin="0,-20,0,0"
+                    Padding="15"
+                    BackgroundColor="White"
+                    CornerRadius="15"
+                    HasShadow="False">
+
+                    <Grid
+                        Margin="0"
+                        Padding="0"
+                        RowSpacing="10">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Frame
+                            Grid.Row="0"
+                            Margin="0"
+                            Padding="20"
+                            BackgroundColor="#454f63"
+                            CornerRadius="10"
+                            HasShadow="False"
+                            VerticalOptions="CenterAndExpand">
+
+                            <Grid
+                                Margin="0"
+                                Padding="0"
+                                RowSpacing="15"
+                                VerticalOptions="FillAndExpand">
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+
+                                <Label
+                                    x:Name="lblindustry1"
+                                    Grid.Row="0"
+                                    FontFamily="truenobd"
+                                    HorizontalOptions="FillAndExpand"
+                                    HorizontalTextAlignment="Start"
+                                    LineBreakMode="CharacterWrap"
+                                    Text="About"
+                                    TextColor="White"
+                                    VerticalOptions="StartAndExpand">
+                                    <Label.FontSize>
+                                        <OnPlatform
+                                            x:TypeArguments="x:Double"
+                                            Android="16"
+                                            iOS="14" />
+                                    </Label.FontSize>
+                                </Label>
+
+                                <Label
+                                    x:Name="lblAbc1"
+                                    Grid.Row="1"
+                                    FontFamily="truenorg"
+                                    HorizontalOptions="FillAndExpand"
+                                    HorizontalTextAlignment="Start"
+                                    LineBreakMode="CharacterWrap"
+                                    Text="Fitness, Veganism, Dance, Ice Skating, Cooking"
+                                    TextColor="White"
+                                    VerticalOptions="FillAndExpand"
+                                    VerticalTextAlignment="Center">
+                                    <Label.FontSize>
+                                        <OnPlatform
+                                            x:TypeArguments="x:Double"
+                                            Android="14"
+                                            iOS="12" />
+                                    </Label.FontSize>
+                                </Label>
+
+                            </Grid>
+
+                        </Frame>
+
+                        <Frame
+                            Grid.Row="1"
+                            Margin="0"
+                            Padding="20"
+                            BackgroundColor="#454f63"
+                            CornerRadius="10"
+                            HasShadow="False"
+                            VerticalOptions="CenterAndExpand">
+
+                            <Grid
+                                Margin="0"
+                                Padding="0"
+                                RowSpacing="15">
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+
+                                <Label
+                                    x:Name="lblindustry"
+                                    Grid.Row="0"
+                                    FontFamily="truenobd"
+                                    HorizontalOptions="FillAndExpand"
+                                    HorizontalTextAlignment="Start"
+                                    LineBreakMode="CharacterWrap"
+                                    Text="Interests"
+                                    TextColor="White"
+                                    VerticalOptions="FillAndExpand"
+                                    VerticalTextAlignment="Start">
+                                    <Label.FontSize>
+                                        <OnPlatform
+                                            x:TypeArguments="x:Double"
+                                            Android="16"
+                                            iOS="14" />
+                                    </Label.FontSize>
+                                </Label>
+
+                                <Label
+                                    x:Name="lblAbc"
+                                    Grid.Row="1"
+                                    FontFamily="truenorg"
+                                    HorizontalOptions="FillAndExpand"
+                                    HorizontalTextAlignment="Start"
+                                    LineBreakMode="CharacterWrap"
+                                    Text="Fitness, Veganism, Dance, Ice Skating, Cooking"
+                                    TextColor="White"
+                                    VerticalOptions="FillAndExpand"
+                                    VerticalTextAlignment="Center">
+                                    <Label.FontSize>
+                                        <OnPlatform
+                                            x:TypeArguments="x:Double"
+                                            Android="14"
+                                            iOS="12" />
+                                    </Label.FontSize>
+                                </Label>
+
+                            </Grid>
+
+                        </Frame>
+
+                        <ext:ExtButton
+                            x:Name="btnWERT"
+                            Grid.Row="2"
+                            Margin="0,10,0,10"
+                            Padding="30,0,30,0"
+                            BackgroundColor="#ff8c00"
+                            Clicked="BtnWERT_Clicked"
+                            CornerRadius="10"
+                            FontFamily="truenosbd"
+                            FontSize="14"
+                            HeightRequest="40"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="TATTEL"
+                            TextColor="White"
+                            VerticalOptions="EndAndExpand" />
+
+                        <StackLayout
+                            Grid.Row="3"
+                            Margin="20,0,20,10"
+                            Padding="0"
+                            Spacing="5">
+
+                            <Label
+                                x:Name="lbltext1"
+                                Margin="0"
+                                FontFamily="truenorg"
+                                HorizontalOptions="FillAndExpand"
+                                HorizontalTextAlignment="Center"
+                                LineBreakMode="CharacterWrap"
+                                Text="You can only Tattel with one Tattler at"
+                                TextColor="#7C7878">
+                                <Label.FontSize>
+                                    <OnPlatform
+                                        x:TypeArguments="x:Double"
+                                        Android="12"
+                                        iOS="10" />
+                                </Label.FontSize>
+                            </Label>
+
+                            <Label
+                                x:Name="lbltext2"
+                                Margin="0"
+                                FontFamily="truenorg"
+                                HorizontalOptions="FillAndExpand"
+                                HorizontalTextAlignment="Center"
+                                LineBreakMode="CharacterWrap"
+                                Text="a time."
+                                TextColor="#7C7878">
+                                <Label.FontSize>
+                                    <OnPlatform
+                                        x:TypeArguments="x:Double"
+                                        Android="12"
+                                        iOS="10" />
+                                </Label.FontSize>
+                            </Label>
+
+                        </StackLayout>
+
+                        <StackLayout
+                            Grid.Row="4"
+                            Margin="20,0,20,0"
+                            Padding="0"
+                            Spacing="5">
+
+                            <Label
+                                x:Name="lbltext3"
+                                Margin="0"
+                                FontFamily="truenorg"
+                                HorizontalOptions="FillAndExpand"
+                                HorizontalTextAlignment="Center"
+                                LineBreakMode="CharacterWrap"
+                                Text="You will not be able to message any"
+                                TextColor="#7C7878">
+                                <Label.FontSize>
+                                    <OnPlatform
+                                        x:TypeArguments="x:Double"
+                                        Android="12"
+                                        iOS="10" />
+                                </Label.FontSize>
+                            </Label>
+
+                            <Label
+                                x:Name="lbltext4"
+                                Margin="0"
+                                FontFamily="truenorg"
+                                HorizontalOptions="FillAndExpand"
+                                HorizontalTextAlignment="Center"
+                                LineBreakMode="CharacterWrap"
+                                Text="Tattlers that are currently Tattling."
+                                TextColor="#7C7878">
+                                <Label.FontSize>
+                                    <OnPlatform
+                                        x:TypeArguments="x:Double"
+                                        Android="12"
+                                        iOS="10" />
+                                </Label.FontSize>
+                            </Label>
+
+                            <Label
+                                x:Name="lbltext5"
+                                Margin="0"
+                                FontFamily="truenorg"
+                                HorizontalOptions="FillAndExpand"
+                                HorizontalTextAlignment="Center"
+                                LineBreakMode="CharacterWrap"
+                                Text="Please wait for them to become"
+                                TextColor="#7C7878">
+                                <Label.FontSize>
+                                    <OnPlatform
+                                        x:TypeArguments="x:Double"
+                                        Android="12"
+                                        iOS="10" />
+                                </Label.FontSize>
+                            </Label>
+
+                            <Label
+                                x:Name="lbltext6"
+                                Margin="0"
+                                FontFamily="truenorg"
+                                HorizontalOptions="FillAndExpand"
+                                HorizontalTextAlignment="Center"
+                                LineBreakMode="CharacterWrap"
+                                Text="available."
+                                TextColor="#7C7878">
+                                <Label.FontSize>
+                                    <OnPlatform
+                                        x:TypeArguments="x:Double"
+                                        Android="12"
+                                        iOS="10" />
+                                </Label.FontSize>
+                            </Label>
+
+                        </StackLayout>
+
+                    </Grid>
+
+                </Frame>
+
+            </Grid>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+
+</ContentPage>

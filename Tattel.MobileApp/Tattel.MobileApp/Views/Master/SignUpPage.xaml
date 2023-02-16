@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Tattel.MobileApp.Views.Master.SignUpPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ext="clr-namespace:Tattel.MobileApp.Extension"
+    BackgroundColor="White"
+    NavigationPage.HasNavigationBar="False"
+    xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+    >
+
+    <ContentPage.Content>
+
+        <ScrollView x:Name="scrMain" VerticalScrollBarVisibility="Never">
+
+            <Grid
+                Margin="0"
+                Padding="40,20,40,20"
+                HorizontalOptions="FillAndExpand"
+                RowSpacing="20"
+                VerticalOptions="FillAndExpand">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label
+                    x:Name="lblHeading"
+                    Grid.Row="0"
+                    FontFamily="truenosbd"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Text="Your Phone Number"
+                    TextColor="#324755"
+                    VerticalOptions="FillAndExpand"
+                    VerticalTextAlignment="Center">
+                    <Label.FontSize>
+                        <OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="18"
+                            iOS="16" />
+                    </Label.FontSize>
+                </Label>
+
+                <BoxView
+                    Grid.Row="1"
+                    Margin="-40,0,-40,0"
+                    BackgroundColor="#e0e1e2"
+                    HeightRequest="1"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="CenterAndExpand" />
+
+                <StackLayout
+                    Grid.Row="2"
+                    Margin="0"
+                    Padding="0"
+                    Spacing="5">
+
+                    <Label
+                        x:Name="lblName"
+                        FontFamily="truenobd"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Start"
+                        Text="Enter your"
+                        TextColor="Black">
+              
+                        <Label.FontSize>
+                            <OnPlatform
+                                x:TypeArguments="x:Double"
+                                Android="30"
+                                iOS="28" />
+                        </Label.FontSize>
+                    </Label>
+
+                    <Label
+                        x:Name="lblName1"
+                        FontFamily="truenobd"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Start"
+                        Text="school email"
+                        TextColor="Black">
+                        
+                        <Label.FontSize>
+                            <OnPlatform
+                                x:TypeArguments="x:Double"
+                                Android="30"
+                                iOS="28" />
+                        </Label.FontSize>
+                    </Label>
+
+                    <Label
+                        x:Name="lblName2"
+                        FontFamily="truenobd"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Start"
+                        Text="address :"
+                        TextColor="Black">
+                        
+                        <Label.FontSize>
+                            <OnPlatform
+                                x:TypeArguments="x:Double"
+                                Android="30"
+                                iOS="28" />
+                        </Label.FontSize>
+                    </Label>
+
+                </StackLayout>
+
+                <Frame
+                    Grid.Row="3"
+                    Margin="0"
+                    Padding="0"
+                    BackgroundColor="#454f63"
+                    CornerRadius="6"
+                    HasShadow="False"
+                    HeightRequest="60"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="CenterAndExpand">
+
+                    <Grid
+                        Margin="0"
+                        Padding="15,10,15,10"
+                        ColumnSpacing="6"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!--<combobox:SfComboBox x:Name="Countries" FontFamily="truenobd" TextSize="14" SelectionChanged="Countries_SelectionChanged"  WidthRequest="120" IsEditableMode="False" DisplayMemberPath="dial_code" TextColor="White" Grid.Column="1" DataSource="{Binding _countries}">
+                            <combobox:SfComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="{Binding ImageSource}" WidthRequest="65" HeightRequest="65"/>
+                                        <Label Text="{Binding dial_code}" FontFamily="truenobd" FontSize="14"/>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </combobox:SfComboBox.ItemTemplate>
+                        </combobox:SfComboBox>-->
+
+                        <Entry Keyboard="Email"
+                            x:Name="txtNumber"
+                            Grid.Column="2"
+                            Margin="3,0,0,0"
+                            FontFamily="truenobd"
+                            FontSize="14"
+                            HorizontalOptions="FillAndExpand"
+                            WidthRequest="150"
+                             BackgroundColor="Transparent"  
+                            HorizontalTextAlignment="Start"
+                            TextColor="White"
+                            VerticalOptions="End" />
+
+                    </Grid>
+
+                </Frame>
+
+                <ext:ExtButton
+                    x:Name="btnNext"
+                    Grid.Row="4"
+                    Padding="0"
+                    BackgroundColor="#ff8c00"
+                    Clicked="BtnNext_Clicked"
+                    CornerRadius="10"
+                    FontFamily="truenosbd"
+                    HeightRequest="45"
+                    HorizontalOptions="FillAndExpand"
+                    Text="NEXT"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand" />
+
+                <StackLayout
+                    Grid.Row="5"
+                    Margin="0"
+                    Padding="0"
+                    HorizontalOptions="CenterAndExpand"
+                    Orientation="Horizontal"
+                    Spacing="0"
+                    VerticalOptions="CenterAndExpand">
+
+                    <Label
+                        x:Name="lblName4"
+                        FontFamily="truenobd"
+                        HorizontalTextAlignment="Center"
+                        Text="By clicking Next you acknowledge that you are at least 18 years old.  "
+                        TextColor="Black">
+              
+                        <Label.FontSize>
+                            <OnPlatform
+                                x:TypeArguments="x:Double"
+                                Android="12"
+                                iOS="10" />
+                        </Label.FontSize>
+                    </Label>
+
+                    <Label
+                        x:Name="lblName5"
+                        FontFamily="truenobd"
+                        Text=""
+                        TextColor="#3a3af2">
+
+                        <Label.FontSize>
+                            <OnPlatform
+                                x:TypeArguments="x:Double"
+                                Android="12"
+                                iOS="10" />
+                        </Label.FontSize>
+                    </Label>
+
+                    <!--<Label
+                        x:Name="lblName6"
+                        FontFamily="truenobd"
+                        Text="to register."
+                        TextColor="Black">
+                        
+                        <Label.FontSize>
+                            <OnPlatform
+                                x:TypeArguments="x:Double"
+                                Android="12"
+                                iOS="10" />
+                        </Label.FontSize>
+                    </Label>-->
+
+                </StackLayout>
+
+            </Grid>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+
+</ContentPage>

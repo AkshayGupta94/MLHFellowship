@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<page:PopupPage
+    Title="NotificationPopupPage"
+    x:Class="Tattel.MobileApp.Views.Master.Popup.notificationPopupPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ext="clr-namespace:Tattel.MobileApp.Extension"
+    xmlns:page="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Content>
+
+        <Frame
+            Margin="40,0,40,0"
+            Padding="0"
+            BackgroundColor="White"
+            CornerRadius="10"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand">
+
+            <Grid
+                Margin="0"
+                Padding="0"
+                RowSpacing="10">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid
+                    Grid.Row="0"
+                    Margin="0"
+                    Padding="25"
+                    HorizontalOptions="CenterAndExpand"
+                    RowSpacing="15"
+                    VerticalOptions="CenterAndExpand">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        x:Name="lblTitle"
+                        Grid.Row="0"
+                        FontFamily="truenobd"
+                        FontSize="20"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Text="Tattel Would Like to Send You Notifications"
+                        TextColor="Black"
+                        VerticalOptions="FillAndExpand"
+                        VerticalTextAlignment="Center" />
+
+                    <Label
+                        x:Name="lblName"
+                        Grid.Row="1"
+                        FontFamily="truenorg"
+                        FontSize="12"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Text="Notifications may include alerts, sounds and icons badges. These can be configured in Settings."
+                        TextColor="#6e8ca0"
+                        VerticalOptions="FillAndExpand"
+                        VerticalTextAlignment="Center" />
+
+                </Grid>
+
+                <BoxView
+                    Grid.Row="1"
+                    Margin="0"
+                    BackgroundColor="#e0e1e2"
+                    HeightRequest="1"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="StartAndExpand" />
+
+                <Grid
+                    Grid.Row="1"
+                    Margin="0"
+                    Padding="0"
+                    ColumnSpacing="0"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="EndAndExpand">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ext:ExtButton
+                        x:Name="buttonDecline"
+                        Grid.Column="0"
+                        Margin="0"
+                        Padding="10,15,10,15"
+                        BackgroundColor="Transparent"
+                        Clicked="Decline_Clicked"
+                        CornerRadius="10"
+                        FontFamily="truenosbd"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand"
+                        Text="Don't Allow"
+                        TextColor="#3a3af2"
+                        VerticalOptions="CenterAndExpand"
+                        IsVisible="true" />
+
+                    <BoxView
+                        Grid.Column="0"
+                        Margin="0"
+                        BackgroundColor="#e0e1e2"
+                        HorizontalOptions="EndAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        WidthRequest="1" />
+
+
+                    <ext:ExtButton
+                        x:Name="Submit"
+                        Grid.Column="1"
+                        Margin="0"
+                        Padding="10,15,10,15"
+                        BackgroundColor="Transparent"
+                        Clicked="Approve_Clicked"
+                        CornerRadius="10"
+                        FontFamily="truenosbd"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand"
+                        Text="Allow"
+                        TextColor="#3a3af2"
+                        VerticalOptions="CenterAndExpand"
+                        IsVisible="true" />
+
+                </Grid>
+
+            </Grid>
+
+        </Frame>
+
+    </ContentPage.Content>
+
+</page:PopupPage>

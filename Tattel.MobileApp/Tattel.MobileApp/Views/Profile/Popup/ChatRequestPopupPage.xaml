@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<page:PopupPage
+    x:Class="Tattel.MobileApp.Views.Profile.Popup.ChatRequestPopupPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:control="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    xmlns:ext="clr-namespace:Tattel.MobileApp.Extension"
+    xmlns:page="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+
+    <ContentPage.Content>
+
+        <Grid
+            Margin="0"
+            Padding="0"
+            VerticalOptions="CenterAndExpand">
+
+            <Frame
+                Margin="20,50,20,20"
+                Padding="0"
+                BackgroundColor="White"
+                CornerRadius="10"
+                HasShadow="False"
+                HeightRequest="250"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="EndAndExpand">
+
+                <Grid
+                    Margin="0"
+                    Padding="0"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="FillAndExpand"
+                    RowSpacing="20"
+                    VerticalOptions="EndAndExpand">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        Margin="35,10,35,0"
+                        FontFamily="truenobd"
+                        HorizontalOptions="CenterAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Text="Thomas Hidalgo"
+                        TextColor="#454f63"
+                        VerticalOptions="CenterAndExpand">
+                        <Label.FontSize>
+                            <OnPlatform
+                                x:TypeArguments="x:Double"
+                                Android="20"
+                                iOS="18" />
+                        </Label.FontSize>
+                    </Label>
+
+                    <StackLayout
+                        Grid.Row="1"
+                        Margin="35,0,35,0"
+                        Padding="0"
+                        HorizontalOptions="CenterAndExpand"
+                        Orientation="Horizontal"
+                        Spacing="0"
+                        VerticalOptions="CenterAndExpand">
+
+                        <Label
+                            Margin="0"
+                            FontFamily="truenorg"
+                            Text="Would like to "
+                            TextColor="#f07308"
+                            VerticalOptions="CenterAndExpand">
+                            <Label.FontSize>
+                                <OnPlatform
+                                    x:TypeArguments="x:Double"
+                                    Android="14"
+                                    iOS="12" />
+                            </Label.FontSize>
+                        </Label>
+
+                        <Image
+                            HeightRequest="15"
+                            Source="iconOrangeLike"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="15" />
+
+                        <Label
+                            FontFamily="truenorg"
+                            Text=" with you! "
+                            TextColor="#f07308"
+                            VerticalOptions="CenterAndExpand">
+                            <Label.FontSize>
+                                <OnPlatform
+                                    x:TypeArguments="x:Double"
+                                    Android="14"
+                                    iOS="12" />
+                            </Label.FontSize>
+                        </Label>
+
+                    </StackLayout>
+
+                    <Label
+                        Grid.Row="2"
+                        Margin="0"
+                        FontFamily="truenorg"
+                        HorizontalOptions="CenterAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Text="You will get 15 mins to Tattel with Thomas Hidalgo."
+                        TextColor="#A8ADB6"
+                        VerticalOptions="CenterAndExpand">
+                        <Label.FontSize>
+                            <OnPlatform
+                                x:TypeArguments="x:Double"
+                                Android="10"
+                                iOS="8" />
+                        </Label.FontSize>
+                    </Label>
+
+                    <Grid
+                        Grid.Row="3"
+                        Margin="0"
+                        Padding="0"
+                        ColumnSpacing="0"
+                        HorizontalOptions="FillAndExpand">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <ext:ExtButton
+                            x:Name="btnCancel"
+                            Grid.Column="0"
+                            Padding="10"
+                            BackgroundColor="White"
+                            Clicked="BtnCancel_Clicked"
+                            CornerRadius="10"
+                            FontFamily="truenosbd"
+                            HeightRequest="50"
+                            Text="DECLINE"
+                            TextColor="#454f63"
+                            VerticalOptions="FillAndExpand" />
+
+                        <BoxView
+                            Grid.Column="0"
+                            Margin="0"
+                            BackgroundColor="#e0e1e2"
+                            HorizontalOptions="EndAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            WidthRequest="1" />
+
+                        <ext:ExtButton
+                            x:Name="btnOk"
+                            Grid.Column="1"
+                            Padding="10"
+                            BackgroundColor="Transparent"
+                            Clicked="BtnOk_Clicked"
+                            CornerRadius="10"
+                            FontFamily="truenosbd"
+                            HeightRequest="50"
+                            HorizontalOptions="FillAndExpand"
+                            Text="APPROVE"
+                            TextColor="#454f63"
+                            VerticalOptions="FillAndExpand" />
+
+                    </Grid>
+
+                    <BoxView
+                        Grid.Row="3"
+                        Margin="0"
+                        BackgroundColor="#e0e1e2"
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand" />
+
+                </Grid>
+
+            </Frame>
+
+            <Grid
+                Margin="0,0,0,50"
+                Padding="0"
+                HeightRequest="100"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="StartAndExpand"
+                WidthRequest="100">
+
+                <control:CircleImage Source="iconUser2.png" />
+
+            </Grid>
+
+        </Grid>
+
+    </ContentPage.Content>
+
+</page:PopupPage>

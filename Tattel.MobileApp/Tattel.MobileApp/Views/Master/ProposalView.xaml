@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tattel.MobileApp.Views.Master.ProposalView"
+             Title="Proposals">
+    <ContentPage.Content>
+        <Grid>
+           
+            
+            <CollectionView x:Name="MyCollection" ItemsSource="{Binding Items}" SelectionMode="Single" Margin="10">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame HasShadow="True" BorderColor="AliceBlue">
+
+                            <StackLayout Margin="10" Orientation="Horizontal">
+                                
+                                
+                                    <Label Text="{Binding Interests}"/>
+                                
+                               
+                            </StackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <ActivityIndicator VerticalOptions="Center" HorizontalOptions="Center" IsRunning="{Binding IsBusy}"/>
+            <Label VerticalOptions="Center" HorizontalOptions="Center" IsVisible="{Binding IsBusy}" Text="{Binding LoadingStatus}" Margin="0,80,0,0"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

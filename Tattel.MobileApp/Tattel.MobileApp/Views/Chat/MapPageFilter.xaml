@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tattel.MobileApp.Views.Chat.MapPageFilter"
+             xmlns:ext="clr-namespace:Tattel.MobileApp.Extension"
+             Title="Filter"
+             >
+    <ContentPage.Content>
+        <ScrollView VerticalScrollBarVisibility="Never">
+
+            <Grid
+                Margin="0"
+                Padding="15"
+                HorizontalOptions="FillAndExpand"
+                RowSpacing="0"
+                VerticalOptions="FillAndExpand">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="45" />
+                    <RowDefinition Height="45" />
+                </Grid.RowDefinitions>
+
+                
+
+                 
+
+                <Label
+                    x:Name="lblName"
+                    Grid.Row="1"
+                    Margin="10,15,0,10"
+                    FontFamily="truenosbd"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="Designation :"
+                    TextColor="#6e8ca0">
+                    <Label.FontSize>
+                        <OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="18"
+                            iOS="16" />
+                    </Label.FontSize>
+                </Label>
+
+                <Frame
+                    Grid.Row="2"
+                    Margin="0"
+                    Padding="20"
+                    BackgroundColor="#454f63"
+                    CornerRadius="10"
+                    HasShadow="False"
+                    VerticalOptions="CenterAndExpand">
+
+                    <Grid Margin="0" Padding="0">
+
+                        <Entry
+                            x:Name="lblAbc"
+                            FontFamily="truenorg"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            
+                            
+                            TextColor="White"
+                            VerticalOptions="FillAndExpand"
+                            VerticalTextAlignment="Center">
+                           
+                        </Entry>
+
+                    </Grid>
+
+                </Frame>
+
+                <Label
+                    x:Name="lblName1"
+                    Grid.Row="3"
+                    Margin="10,15,0,10"
+                    FontFamily="truenosbd"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="Organisation/College :"
+                    TextColor="#6e8ca0">
+                    <Label.FontSize>
+                        <OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="18"
+                            iOS="16" />
+                    </Label.FontSize>
+                </Label>
+
+                <Frame
+                    Grid.Row="4"
+                    Margin="0"
+                    Padding="20"
+                    BackgroundColor="#454f63"
+                    CornerRadius="10"
+                    HasShadow="False"
+                    VerticalOptions="CenterAndExpand">
+
+                    <Grid Margin="0" Padding="0">
+
+                        <Entry
+                            x:Name="lblAbc1"
+                            FontFamily="truenorg"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            
+                           
+                            TextColor="White"
+                            VerticalOptions="FillAndExpand"
+                            VerticalTextAlignment="Center">
+                            
+                        </Entry>
+
+                    </Grid>
+
+                </Frame>
+
+
+             <!--   <Label
+                    x:Name="lblAge1"
+                    Grid.Row="5"
+                    Margin="10,15,0,10"
+                    FontFamily="truenosbd"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="Sector : "
+                    TextColor="#6e8ca0">
+                    <Label.FontSize>
+                        <OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="18"
+                            iOS="16" />
+                    </Label.FontSize>
+                </Label>
+
+                <Frame
+                    Grid.Row="6"
+                    Margin="0"
+                    Padding="20"
+                    BackgroundColor="#454f63"
+                    CornerRadius="10"
+                    HasShadow="False"
+                    VerticalOptions="CenterAndExpand">
+
+                    <Grid Margin="0" Padding="0">
+
+                        <Entry
+                            x:Name="lblAge2"
+                            FontFamily="truenorg"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            Text="{Binding EmailAddress}"
+                            TextColor="White"
+                            VerticalOptions="FillAndExpand"
+                            VerticalTextAlignment="Center">
+                            
+                        </Entry>
+
+                    </Grid>
+
+                </Frame>-->
+                <Label
+                   
+                    Grid.Row="5"
+                    Margin="10,15,0,10"
+                    FontFamily="truenosbd"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="Minimum Age : "
+                    TextColor="#6e8ca0">
+                    <Label.FontSize>
+                        <OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="18"
+                            iOS="16" />
+                    </Label.FontSize>
+                </Label>
+
+                <Frame
+                    Grid.Row="6"
+                    Margin="0"
+                    Padding="20"
+                    BackgroundColor="#454f63"
+                    CornerRadius="10"
+                    HasShadow="False"
+                    VerticalOptions="CenterAndExpand">
+
+                    <Grid Margin="0" Padding="0">
+
+                        <Entry
+                            
+                            FontFamily="truenorg"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Start"
+                            x:Name="EntryAge"
+                            TextColor="White"
+                            VerticalOptions="FillAndExpand"
+                            VerticalTextAlignment="Center">
+                            
+                        </Entry>
+
+                    </Grid>
+
+                </Frame>
+                <Label
+                   
+                    Grid.Row="7"
+                    Margin="10,15,0,10"
+                    FontFamily="truenosbd"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="Gender : "
+                    TextColor="#6e8ca0">
+                    <Label.FontSize>
+                        <OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="18"
+                            iOS="16" />
+                    </Label.FontSize>
+                </Label>
+
+                <Frame
+                    Grid.Row="8"
+                    Margin="0"
+                    Padding="20"
+                    BackgroundColor="#454f63"
+                    CornerRadius="10"
+                    HasShadow="False"
+                    VerticalOptions="CenterAndExpand">
+
+                    <StackLayout
+                           
+                           
+                            Padding="0"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal"
+                            VerticalOptions="CenterAndExpand">
+
+                        <Picker 
+                                 Title="Select a gender"
+                            
+                            TitleColor="AntiqueWhite"
+                            FontFamily="truenosbd"
+                                HorizontalOptions="FillAndExpand"
+                                 
+                                VerticalOptions="FillAndExpand"
+                                    x:Name="Picker_Gender"
+                                FontSize="12"
+                                    >
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Female</x:String>
+                                    <x:String>Male</x:String>
+                                    <x:String>Other</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+
+                    </StackLayout>
+
+                </Frame>
+                <Label
+                   
+                    Grid.Row="9"
+                    Margin="10,15,0,10"
+                    FontFamily="truenosbd"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Text="Sector : "
+                    TextColor="#6e8ca0">
+                    <Label.FontSize>
+                        <OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="18"
+                            iOS="16" />
+                    </Label.FontSize>
+                </Label>
+
+                <Grid
+                    Grid.Row="10"
+                        Margin="0"
+                        Padding="0"
+                        RowSpacing="0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="200" />
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Row="0">
+                        <Entry  
+                            x:Name="SearchLabel"
+                            Margin="15"
+                            FontFamily="truenosbd"
+                           TextChanged="SearchLabel_TextChanged"
+                            Placeholder="Search Here"
+                           
+                            VerticalTextAlignment="Center">
+                            <Entry.FontSize>
+                                <OnPlatform
+                                    x:TypeArguments="x:Double"
+                                    Android="14"
+                                    iOS="12" />
+                            </Entry.FontSize>
+                        </Entry>
+                    </StackLayout>
+                    <CollectionView
+                            x:Name="lblName6"
+                            Grid.Row="3"
+                            Margin="15"
+                           
+                            HorizontalOptions="FillAndExpand"
+                           SelectionMode="Single"
+                            ItemsSource="{Binding ServerInterests}"
+                            SelectionChanged="lblName6_SelectionChanged"
+                           SelectedItems="{Binding interests}"
+                            VerticalOptions="FillAndExpand"
+                            >
+
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+
+                                <Label Margin="10" FontSize="14" Text="{Binding}"/>
+
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                    <ActivityIndicator IsRunning="False" Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center" x:Name="loading"/>
+                </Grid>
+
+                <ext:ExtButton
+                    x:Name="btnMain"
+                    Grid.Row="11"
+                    Margin="0,0,0,0"
+                    Padding="0"
+                    BackgroundColor="#ff8c00"
+                   Clicked="btnMain_Clicked"
+                    CornerRadius="10"
+                    FontFamily="truenosbd"
+                    HeightRequest="45"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Filter"
+                    TextColor="White"
+                    VerticalOptions="EndAndExpand"
+                    WidthRequest="200" />
+               
+
+            </Grid>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

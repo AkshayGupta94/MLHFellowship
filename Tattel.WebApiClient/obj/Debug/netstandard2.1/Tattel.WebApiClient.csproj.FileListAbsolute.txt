@@ -1,0 +1,9 @@
+G:\Consulting\TattleNew\Tattel.WebApiClient\bin\Debug\netstandard2.1\Tattel.WebApiClient.deps.json
+G:\Consulting\TattleNew\Tattel.WebApiClient\bin\Debug\netstandard2.1\Tattel.WebApiClient.dll
+G:\Consulting\TattleNew\Tattel.WebApiClient\bin\Debug\netstandard2.1\Tattel.WebApiClient.pdb
+G:\Consulting\TattleNew\Tattel.WebApiClient\obj\Debug\netstandard2.1\Tattel.WebApiClient.csproj.AssemblyReference.cache
+G:\Consulting\TattleNew\Tattel.WebApiClient\obj\Debug\netstandard2.1\Tattel.WebApiClient.AssemblyInfoInputs.cache
+G:\Consulting\TattleNew\Tattel.WebApiClient\obj\Debug\netstandard2.1\Tattel.WebApiClient.AssemblyInfo.cs
+G:\Consulting\TattleNew\Tattel.WebApiClient\obj\Debug\netstandard2.1\Tattel.WebApiClient.csproj.CoreCompileInputs.cache
+G:\Consulting\TattleNew\Tattel.WebApiClient\obj\Debug\netstandard2.1\Tattel.WebApiClient.dll
+G:\Consulting\TattleNew\Tattel.WebApiClient\obj\Debug\netstandard2.1\Tattel.WebApiClient.pdb

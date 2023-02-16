@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tattel.MobileApp.Views.FirstTimeScreen.UserTypePage"
+             xmlns:ext="clr-namespace:Tattel.MobileApp.Extension"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Content>
+        <ScrollView x:Name="scrMain" VerticalScrollBarVisibility="Never">
+
+            <Grid
+                Margin="0"
+                Padding="40,20,40,20"
+                HorizontalOptions="FillAndExpand"
+                RowSpacing="20"
+                VerticalOptions="FillAndExpand">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+
+                </Grid.RowDefinitions>
+
+                <Label
+                    x:Name="lblHeading"
+                    Grid.Row="0"
+                    FontFamily="truenosbd"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Text="Please Select"
+                    TextColor="#324755"
+                    VerticalOptions="FillAndExpand"
+                    VerticalTextAlignment="Center">
+                    <Label.FontSize>
+                        <OnPlatform
+                            x:TypeArguments="x:Double"
+                            Android="18"
+                            iOS="16" />
+                    </Label.FontSize>
+                </Label>
+
+                <BoxView
+                    Grid.Row="1"
+                    Margin="-40,0,-40,0"
+                    BackgroundColor="#e0e1e2"
+                    HeightRequest="1"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="CenterAndExpand" />
+
+                <StackLayout
+                    Grid.Row="2"
+                    Margin="0"
+                    Padding="0"
+                    Spacing="5">
+
+                    <Label
+                        x:Name="lblName"
+                        FontFamily="truenobd"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Start"
+                        Text="I am a:"
+                        TextColor="Black">
+
+                        <Label.FontSize>
+                            <OnPlatform
+                                x:TypeArguments="x:Double"
+                                Android="30"
+                                iOS="28" />
+                        </Label.FontSize>
+                    </Label>
+
+                    
+
+                </StackLayout>
+                <ext:ExtButton
+                    x:Name="btnStudent"
+                    Grid.Row="3"
+                    Padding="0"
+                    BackgroundColor="#454f63"
+                    Clicked="btnStudent_Clicked"
+                    CornerRadius="10"
+                    FontFamily="truenosbd"
+                    HeightRequest="60"
+                    HorizontalOptions="FillAndExpand"
+                    Text="STUDENT"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand" />
+
+                <ext:ExtButton
+                    x:Name="btnProfessional"
+                    Grid.Row="4"
+                    Padding="0"
+                    BackgroundColor="#ff8c00"
+                    Clicked="btnProfessional_Clicked"
+                    CornerRadius="10"
+                    FontFamily="truenosbd"
+                    HeightRequest="60"
+                    HorizontalOptions="FillAndExpand"
+                    Text="PROFESSIONAL"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand" />
+                
+
+                
+
+                <StackLayout
+                    Grid.Row="5"
+                    Margin="0"
+                    Padding="0"
+                    HorizontalOptions="CenterAndExpand"
+                    Orientation="Horizontal"
+                    Spacing="0"
+                    VerticalOptions="CenterAndExpand">
+
+                    <Label
+                        x:Name="lblName4"
+                        FontFamily="truenobd"
+                        HorizontalTextAlignment="Center"
+                        Text="By clicking Next you acknowledge that you are at least 18 years old.  "
+                        TextColor="Black">
+
+                        <Label.FontSize>
+                            <OnPlatform
+                                x:TypeArguments="x:Double"
+                                Android="12"
+                                iOS="10" />
+                        </Label.FontSize>
+                    </Label>
+
+                    <Label
+                        x:Name="lblName5"
+                        FontFamily="truenobd"
+                        Text=""
+                        TextColor="#3a3af2">
+
+                        <Label.FontSize>
+                            <OnPlatform
+                                x:TypeArguments="x:Double"
+                                Android="12"
+                                iOS="10" />
+                        </Label.FontSize>
+                    </Label>
+
+                    
+
+                </StackLayout>
+                <Image
+                Margin="0,150,0,0"    
+                Grid.Row="6"
+                Aspect="AspectFit"
+                HeightRequest="250"
+                VerticalOptions="EndAndExpand"    
+                Source="tatcon.png"
+                WidthRequest="250" />
+            </Grid>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

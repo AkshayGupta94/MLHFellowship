@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    Title="FirstTimeScreenPage"
+    x:Class="Tattel.MobileApp.Views.FirstTimeScreen.FirstTimeScreenPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="White"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+
+        <Grid
+            Margin="0"
+            Padding="0"
+            HorizontalOptions="CenterAndExpand"
+            RowSpacing="35"
+            VerticalOptions="CenterAndExpand">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Image
+                Grid.Row="0"
+                Aspect="AspectFit"
+                HeightRequest="170"
+                Source="tatcon.png"
+                WidthRequest="170" />
+
+            <Label
+                x:Name="lblName"
+                Grid.Row="1"
+                Margin="0"
+                FontFamily="truenorg"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                Text="Welcome to Tattel"
+                TextColor="Black">
+                <Label.FontSize>
+                    <OnPlatform
+                        x:TypeArguments="x:Double"
+                        Android="22"
+                        iOS="20" />
+                </Label.FontSize>
+            </Label>
+
+            <Label
+                x:Name="lblName2"
+                Grid.Row="2"
+                Margin="0,0,250,0"
+                FontFamily="truenorg"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                Text="Read our "
+                TextColor="Gray">
+                <Label.FontSize>
+                    <OnPlatform
+                        x:TypeArguments="x:Double"
+                        Android="10"
+                        iOS="10" />
+                </Label.FontSize>
+            </Label>
+
+            <Label
+                x:Name="lblName3"
+                Grid.Row="2"
+                Margin="10,0,140,0"
+                FontFamily="truenorg"
+                HorizontalOptions="CenterAndExpand"
+                Text="Privacy Policy."
+                TextColor="#3a3af2">
+
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="PrivacyGesture_Tapped"/>
+                </Label.GestureRecognizers>
+
+                <Label.FontSize>
+                    <OnPlatform
+                        x:TypeArguments="x:Double"
+                        Android="10"
+                        iOS="10" />
+                </Label.FontSize>
+            </Label>
+
+            <Label
+                x:Name="lblName4"
+                Grid.Row="2"
+                Margin="0,0,-120,0"
+                FontFamily="truenorg"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                Text=" Tap 'Agree and Continue' to accept "
+                TextColor="Gray">
+                <Label.FontSize>
+                    <OnPlatform
+                        x:TypeArguments="x:Double"
+                        Android="10"
+                        iOS="10" />
+                </Label.FontSize>
+            </Label>
+
+            <Label
+                x:Name="lblName5"
+                Grid.Row="2"
+                Margin="0,15,80,0"
+                FontFamily="truenorg"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                Text="the"
+                TextColor="Gray">
+                <Label.FontSize>
+                    <OnPlatform
+                        x:TypeArguments="x:Double"
+                        Android="10"
+                        iOS="10"/>
+                </Label.FontSize>
+            </Label>
+
+            
+            <Label
+                x:Name="lblName6"
+                Grid.Row="2"
+                Margin="0,15,-22,0"
+                FontFamily="truenorg"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                Text="Terms of Service."
+                TextColor="#3a3af2">
+
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TermsGesture_Tapped"/>
+                </Label.GestureRecognizers>
+                <Label.FontSize>
+                    <OnPlatform
+                        x:TypeArguments="x:Double"
+                        Android="10"
+                        iOS="10" />
+                </Label.FontSize>
+            </Label>
+
+
+            <Button
+                x:Name="lblName7"
+                Grid.Row="3"
+                Margin="0"
+                FontFamily="truenorg"
+                HorizontalOptions="CenterAndExpand"
+                Text="AGREE AND CONTINUE"
+                TextColor="#0000ee"
+                Clicked="Handle_Clicked">
+                <Button.FontSize>
+                    <OnPlatform
+                        x:TypeArguments="x:Double"
+                        Android="20"
+                        iOS="18" />
+                </Button.FontSize>
+            </Button>
+
+        </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
